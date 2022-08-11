@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGiris));
             this.picclose = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btngiris = new System.Windows.Forms.Button();
             this.pctsiftregöster = new System.Windows.Forms.PictureBox();
@@ -46,6 +45,7 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picclose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctsiftregöster)).BeginInit();
@@ -68,15 +68,6 @@
             this.picclose.TabStop = false;
             this.picclose.Click += new System.EventHandler(this.picclose_Click);
             this.picclose.MouseHover += new System.EventHandler(this.picclose_MouseHover);
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(206)))), ((int)(((byte)(19)))));
-            this.panel2.Location = new System.Drawing.Point(711, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 700);
-            this.panel2.TabIndex = 3;
             // 
             // pictureBox2
             // 
@@ -230,6 +221,15 @@
             this.guna2Elipse3.BorderRadius = 15;
             this.guna2Elipse3.TargetControl = this.pctsiftregöster;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(206)))), ((int)(((byte)(19)))));
+            this.panel2.Location = new System.Drawing.Point(711, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 700);
+            this.panel2.TabIndex = 3;
+            // 
             // FormGiris
             // 
             this.AcceptButton = this.btngiris;
@@ -267,7 +267,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox picclose;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btngiris;
         private System.Windows.Forms.PictureBox pctsiftregöster;
@@ -282,6 +281,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

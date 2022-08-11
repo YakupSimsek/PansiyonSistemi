@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AMRConnector;
 
 namespace PansiyonSistemi
 {
@@ -20,9 +21,14 @@ namespace PansiyonSistemi
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             timer1.Stop();
-            FormGiris fr = new FormGiris();
+           Giris fr = new Giris();
             fr.Show();
             this.Hide();
+        }
+        private void panelharaket(Control btn)
+        {
+            pnlharaket.Top = btn.Top;
+            pnlharaket.Height = btn.Height;
         }
 
         private void picclose_Click(object sender, EventArgs e)
@@ -39,6 +45,28 @@ namespace PansiyonSistemi
         {
             timer1.Start();
             lblkullanıcı.Text = kullanıcı;
+        }
+        private Form activeForm = null;
+        private void anapanel(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnlana.Controls.Add(childForm);
+            pnlana.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+
+        }
+
+        private void btnayarlar_Click(object sender, EventArgs e)
+        {
+            panelharaket(btnayarlar);
+            anapanel(new Ayarlar());
         }
     }
 }

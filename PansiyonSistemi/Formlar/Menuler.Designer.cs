@@ -31,10 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menuler));
             this.pnlsol = new System.Windows.Forms.Panel();
+            this.pnlharaket = new System.Windows.Forms.Panel();
             this.btnayarlar = new Guna.UI2.WinForms.Guna2Button();
             this.btnrezer = new Guna.UI2.WinForms.Guna2Button();
             this.btnoda = new Guna.UI2.WinForms.Guna2Button();
-            this.btnkullanıcı = new Guna.UI2.WinForms.Guna2Button();
+            this.btnmusteri = new Guna.UI2.WinForms.Guna2Button();
             this.btngosterge = new Guna.UI2.WinForms.Guna2Button();
             this.pnllogo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -47,7 +48,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnlana = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pnlharaket = new System.Windows.Forms.Panel();
             this.pnlsol.SuspendLayout();
             this.pnllogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -63,7 +63,7 @@
             this.pnlsol.Controls.Add(this.btnayarlar);
             this.pnlsol.Controls.Add(this.btnrezer);
             this.pnlsol.Controls.Add(this.btnoda);
-            this.pnlsol.Controls.Add(this.btnkullanıcı);
+            this.pnlsol.Controls.Add(this.btnmusteri);
             this.pnlsol.Controls.Add(this.btngosterge);
             this.pnlsol.Controls.Add(this.pnllogo);
             this.pnlsol.Dock = System.Windows.Forms.DockStyle.Left;
@@ -71,6 +71,15 @@
             this.pnlsol.Name = "pnlsol";
             this.pnlsol.Size = new System.Drawing.Size(279, 720);
             this.pnlsol.TabIndex = 0;
+            // 
+            // pnlharaket
+            // 
+            this.pnlharaket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.pnlharaket.Location = new System.Drawing.Point(9, 229);
+            this.pnlharaket.Name = "pnlharaket";
+            this.pnlharaket.Size = new System.Drawing.Size(10, 45);
+            this.pnlharaket.TabIndex = 6;
+            this.pnlharaket.Visible = false;
             // 
             // btnayarlar
             // 
@@ -91,7 +100,7 @@
             this.btnayarlar.Name = "btnayarlar";
             this.btnayarlar.Size = new System.Drawing.Size(234, 45);
             this.btnayarlar.TabIndex = 5;
-            this.btnayarlar.Text = "Ayarlar";
+            this.btnayarlar.Text = "Personel";
             this.btnayarlar.Click += new System.EventHandler(this.btnayarlar_Click);
             // 
             // btnrezer
@@ -109,7 +118,7 @@
             this.btnrezer.Image = ((System.Drawing.Image)(resources.GetObject("btnrezer.Image")));
             this.btnrezer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnrezer.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnrezer.Location = new System.Drawing.Point(25, 389);
+            this.btnrezer.Location = new System.Drawing.Point(25, 469);
             this.btnrezer.Name = "btnrezer";
             this.btnrezer.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnrezer.Size = new System.Drawing.Size(234, 45);
@@ -131,32 +140,33 @@
             this.btnoda.Image = ((System.Drawing.Image)(resources.GetObject("btnoda.Image")));
             this.btnoda.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnoda.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnoda.Location = new System.Drawing.Point(25, 469);
+            this.btnoda.Location = new System.Drawing.Point(25, 389);
             this.btnoda.Name = "btnoda";
             this.btnoda.Size = new System.Drawing.Size(234, 45);
             this.btnoda.TabIndex = 3;
             this.btnoda.Text = "Odalar";
             // 
-            // btnkullanıcı
+            // btnmusteri
             // 
-            this.btnkullanıcı.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnkullanıcı.BorderRadius = 20;
-            this.btnkullanıcı.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnkullanıcı.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnkullanıcı.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnkullanıcı.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnkullanıcı.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnkullanıcı.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(206)))), ((int)(((byte)(19)))));
-            this.btnkullanıcı.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnkullanıcı.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(245)))), ((int)(((byte)(237)))));
-            this.btnkullanıcı.Image = ((System.Drawing.Image)(resources.GetObject("btnkullanıcı.Image")));
-            this.btnkullanıcı.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnkullanıcı.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnkullanıcı.Location = new System.Drawing.Point(25, 309);
-            this.btnkullanıcı.Name = "btnkullanıcı";
-            this.btnkullanıcı.Size = new System.Drawing.Size(234, 45);
-            this.btnkullanıcı.TabIndex = 2;
-            this.btnkullanıcı.Text = "Müsteriler";
+            this.btnmusteri.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnmusteri.BorderRadius = 20;
+            this.btnmusteri.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnmusteri.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnmusteri.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnmusteri.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnmusteri.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnmusteri.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(206)))), ((int)(((byte)(19)))));
+            this.btnmusteri.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnmusteri.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(245)))), ((int)(((byte)(237)))));
+            this.btnmusteri.Image = ((System.Drawing.Image)(resources.GetObject("btnmusteri.Image")));
+            this.btnmusteri.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnmusteri.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnmusteri.Location = new System.Drawing.Point(25, 309);
+            this.btnmusteri.Name = "btnmusteri";
+            this.btnmusteri.Size = new System.Drawing.Size(234, 45);
+            this.btnmusteri.TabIndex = 2;
+            this.btnmusteri.Text = "Müsteriler";
+            this.btnmusteri.Click += new System.EventHandler(this.btnkullanıcı_Click);
             // 
             // btngosterge
             // 
@@ -295,14 +305,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pnlharaket
-            // 
-            this.pnlharaket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.pnlharaket.Location = new System.Drawing.Point(9, 229);
-            this.pnlharaket.Name = "pnlharaket";
-            this.pnlharaket.Size = new System.Drawing.Size(10, 45);
-            this.pnlharaket.TabIndex = 6;
-            // 
             // Menuler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -341,7 +343,7 @@
         private System.Windows.Forms.Label lbltarih;
         private Guna.UI2.WinForms.Guna2Button btnrezer;
         private Guna.UI2.WinForms.Guna2Button btnoda;
-        private Guna.UI2.WinForms.Guna2Button btnkullanıcı;
+        private Guna.UI2.WinForms.Guna2Button btnmusteri;
         private Guna.UI2.WinForms.Guna2Button btngosterge;
         private System.Windows.Forms.Label lblkullanıcı;
         private System.Windows.Forms.Panel pnlana;

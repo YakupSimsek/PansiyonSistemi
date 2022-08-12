@@ -65,8 +65,17 @@ namespace PansiyonSistemi
 
         private void btnayarlar_Click(object sender, EventArgs e)
         {
+           btnmusteri.FillColor = Color.FromArgb(125, 206, 19);
+            btnayarlar.FillColor = Color.FromArgb(43, 122, 11);
             panelharaket(btnayarlar);
             anapanel(new Ayarlar());
+        }
+
+        private void btnkullanıcı_Click(object sender, EventArgs e)
+        {
+            btnmusteri.FillColor = Color.FromArgb(43, 122, 11);
+            btnayarlar.FillColor = Color.FromArgb(125,206,19);
+            anapanel(new Müsteri()) ;
         }
     }
 }

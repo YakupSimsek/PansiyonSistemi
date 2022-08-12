@@ -81,6 +81,12 @@
     <Compile Include="Formlar\Menuler.Designer.cs">
       <DependentUpon>Menuler.cs</DependentUpon>
     </Compile>
+    <Compile Include="Müsteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Müsteri.Designer.cs">
+      <DependentUpon>Müsteri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Ayarlar.resx">
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Menuler.resx">
       <DependentUpon>Menuler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Müsteri.resx">
+      <DependentUpon>Müsteri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -24,7 +24,7 @@ namespace PansiyonSistemi
         {
             txtad.Clear();
             txtsifre.Clear();
-            tabControl1.SelectedTab = pageekle;
+            tabayar.SelectedTab = pageekle;
         }
         private void clear1()
         {
@@ -79,30 +79,32 @@ namespace PansiyonSistemi
         private void btnsıl_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand sil = new SqlCommand("delete from KullanıcılarTbl where Kullanıcıadı =@p1 ",con);
-            sil.Parameters.AddWithValue("@p1",txtad2.Text);
+            SqlCommand sil = new SqlCommand("delete from KullanıcılarTbl where ID =@p1 ",con);
+            sil.Parameters.AddWithValue("@p1",txtıd.Text);
             sil.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Personel Kaydı Silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+       
 
-        private void btngun_Click(object sender, EventArgs e)
+        private void btngun_Click_1(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand guncelle = new SqlCommand("update set KullanıcılarTbl Kullanıcıadı=@p1,Sifre=@p2",con);
-            guncelle.Parameters.AddWithValue("@p1",txtad2.Text);
-            guncelle.Parameters.AddWithValue("@p2",txtsifre2.Text);
+            SqlCommand guncelle = new SqlCommand("update set KullanıcılarTbl Kullanıcıadı=@p1,Sifre=@p2,Rolü =@p3", con);
+            guncelle.Parameters.AddWithValue("@p1", txtad2.Text);
+            guncelle.Parameters.AddWithValue("@p2", txtsifre2.Text);
+            guncelle.Parameters.AddWithValue("@p3", txtrol2.Text);
             guncelle.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Personel Kaydı Güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void txtara_TextChanged(object sender, EventArgs e)
+        private void btnara_Click(object sender, EventArgs e)
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = dataGridView1.DataSource;
             bs.Filter = "Kullanıcıadı LIKE '%" + txtara.Text + "%'";
-            dataGridView1.DataSource = bs.DataSource;    
+            dataGridView1.DataSource = bs.DataSource;
         }
     }
 }
